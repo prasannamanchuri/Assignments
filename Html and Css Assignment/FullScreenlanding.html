@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FullScreenLandingPage</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<style>
+*
+{
+padding: 0px;
+margin: 0px;
+font-family: monospace;
+}
+
+header
+{
+
+	height: 100vh;
+	background-image: url("https://img.freepik.com/free-photo/living-room-interior-wall-warm-tones-gray-armchair-with-wood-cabinet-3d-rendering_41470-3656.jpg?size=626&ext=jpg");
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-size: cover;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+.main
+{
+	width: 90%;
+	max-width: 100%;
+	margin: 10px 5% 0 5%;
+	font-size: 1.4em;
+	line-height: 1.4em;
+	/*padding: 15px;*/
+	background-color: #eee;
+	height: 100vh;
+}
+
+.main p
+{
+	padding: 10px;
+}
+.p1
+{
+background-color:#66CCFF";
+}
+.p2
+{
+background-color:#CCFFFF;
+}
+.p3
+{
+background-color:#66CCFF;
+}
+.p4
+{
+background-color:#CCFFFF;
+}
+#down
+{
+	position: absolute;
+	top:85vh;
+	size: 40px;
+	padding: 20px;
+	font-size: 2.5em;
+}
+
+#down:hover
+{
+	cursor: pointer;
+	background-color: #eee;
+	opacity: 0.8;
+}
+</style>
+<body>
+
+	<header>
+	<font color=#3399CC>
+		<h1>Welcome to Capgemini</h1>
+		<p>How are you doing?</p>
+		</font>
+    <span id="down">&#8595;</span>
+	</header>
+
+	<div class="main">
+
+		<h1 style="text-align:center;">About Capgemini</h1>
+	
+		<div class="p1">
+		
+		<p>
+			Capgemini is a global leader in partnering with companies to transform and manage their business by harnessing the power of technology. The Group is guided everyday by its purpose of unleashing human energy through technology for an inclusive and sustainable future. It is a responsible and diverse organization of 290,000 team members in nearly 50 countries. With its strong 50 year heritage and deep industry expertise, Capgemini is trusted by its clients to address the entire breadth of their business needs, from strategy and design to operations, fueled by the fast evolving and innovative world of cloud, data, AI, connectivity, software, digital engineering and platforms. The Group reported in 2020 global revenues of €16 billion.
+		</p>
+		
+		</div>
+		<div class="p2">
+		
+		<p>
+			The Board of Directors sets the strategic direction of the Company and the Capgemini Group. It appoints the executive corporate officer(s) responsible for implementing this strategy, approves the financial statements, convenes the Shareholders’ Meeting, and proposes the annual dividend. It takes decisions on the major issues concerning the day-to-day operation and future of Capgemini, to promote sustainable value creation for its shareholders and all stakeholders.
+
+			
+		</p>
+		
+		</div>
+		<div class="p3">
+		
+		<p>
+			The Group’s sectorial expertise ensures that we are always up to speed with the challenges facing our clients and developing solutions tailored to their specific objectives. The Group has a presence in six sectors
+		</p>
+		
+		</div>
+		<div class="p4">
+	
+		<p>
+			As a leader in digital transformation, we are also a responsible company working to ensure that technology and innovation drive sustainable and social development. We have strengthened this commitment to our employees, clients, partners, communities & planet by leveraging three fundamental pillars: Diversity and Inclusion, Digital Inclusion, and Environmental Sustainability
+		</p>
+		
+		</div>
+		
+		<br><br>
+		<h3>Find more about us on</h3>
+		<a href="https://www.capgemini.com/our-company/our-corporate-social-responsibility-program/">Wikipedia</a>.
+   </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+
+	$(document).ready( function () {
+	$('#down').on('click',function () {
+		$("html").scrollTop(0);
+		console.log("Clicked!");
+		 $('html, body').animate({
+        scrollTop: $(".main").offset().top
+    }, 1000);
+	});
+});
+</script>
+</body>
+</html>
