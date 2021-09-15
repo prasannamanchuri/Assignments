@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>alternate merge of list</title>
+</head>
+<body>
+<script>
+var list1 = ["a", "b", "c", "d"],list2 = [1, 2],result = [],i, l = Math.min(list1.length,list2.length);
+for (i = 0; i < l; i++) 
+{
+result.push(list1[i],list2[i]);
+}
+result.push(list1.slice(l),list2.slice(l));
+
+document.write(result);
+	
+</script>
+
+</body>
+</html>

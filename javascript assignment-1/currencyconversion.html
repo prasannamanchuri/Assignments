@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>currency convertor</title>
+</head>
+<body>
+<table>
+<tr>
+<td> <input type="text" name="a" id="currency" placeholder="Enter currency in dollar"/> </td>
+</tr>
+<tr>
+<td> <button onclick="currencyconvertor()">Convert</button></td>
+</tr>
+</table>
+<div id="num"></div>
+</body>
+<script>
+function currencyconvertor()
+{
+	var dollar;
+	dollar= parseInt(document.getElementById ("currency").value);
+	var INR,Yen,Euro,Pound;
+	INR=dollar*74.28;
+	Yen=dollar*109.4;
+	Euro=dollar*0.84;
+	Pound =dollar*0.72;
+	var s=INR+"<br>"+Yen+"<br>"+Euro+"<br>"+Pound;
+	document.getElementById ("num").innerHTML=s;
+}
+</script>
+
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>reverse function</title>
+</head>
+<body>
+
+    <h3 id="arr">Input Array Elements</h3>
+<form class="" action="index.html" method="post">
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <button type="button" name="button" onclick="reverse()">
+            Submit
+        </button>
+    </form>
+    <div id="num"></div>
+    </body>
+<script>
+	 var k = "The respective values are :";
+     function reverse() 
+     {
+         var input = document.getElementsByName('array[]');
+
+         for (var i =input.length-1; i>=0; i--) 
+         {
+             var a = input[i];
+             k = k + "array[" + i + "].value= "
+                                + a.value + " ";
+         }
+
+         document.getElementById("num").innerHTML = k;
+         document.getElementById("arr").innerHTML = "Output";
+     }
+
+</script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>random array</title>
+</head>
+<body>
+<table>
+<tr>
+<td> <input type="text" name="a" id="first" placeholder="Enter a number"/> </td>
+</tr>
+<tr>
+<td> <button onclick="random()">Submit</button></td>
+</tr>
+</table>
+<div id="num"></div>
+</body>
+<script>
+function random()
+{
+var n,i,sum = 0,min,max,avg=0;
+var even_count=0,odd_count=0,count="";
+var arr=[];
+n = parseInt(document.getElementById ("first").value);
+for (i =1; i<=n; i++)
+{
+	arr.push(Math.round(Math.random() *n))
+
+}
+for (i =1; i<=n; i++)
+{
+	sum=sum+i;
+
+}
+for(i = 1; i<=n; i++)
+{
+    if(arr[i] % 2 == 1)
+        odd_count++;
+    else
+        even_count++;
+}
+if(even_count>odd_count)
+	count="even";
+else if(even_count==odd_count)
+	count="equal";
+else
+	count="odd";
+avg=sum/n;
+min=Math.min(...arr);
+max=Math.max(...arr) ;
+var s="maximum number:"+max+"<br>"+"minimum number:"+min+"<br>"+"highest count is:"+count+"<br>"+"sum of numbers"+sum+"<br>"+"average of numbers is:"+avg;
+document.getElementById ("num").innerHTML=s;
+}
+</script>
+</html>

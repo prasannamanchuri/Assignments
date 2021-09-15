@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>JavaScript program to find the Sum of n natural numbers</title>
+</head>
+<body>
+<table>
+<tr>
+<td> <input type="text" name="a" id="first" placeholder="Enter a number"/> </td>
+</tr>
+<tr>
+<td> <button onclick="sum ()">Submit</button></td>
+</tr>
+
+</table>
+<div id="num"></div>
+<div id="num1"></div>
+<div id="num2"></div>
+</body>
+
+<script type="text/javascript">
+function sum()
+{
+var n,i, sum = 0;
+n = parseInt(document.getElementById ("first").value);
+for (i = 1; i <= n; i++)
+{
+sum =sum+i;
+
+}
+document.getElementById ("num").innerHTML="Sum of "+n+ " natural numbers using forloop :"+sum;
+while(i<=n)
+{
+sum = sum+i;
+}
+document.getElementById ("num1").innerHTML="Sum of "+n+ " natural numbers using while :"+sum;
+do
+{
+sum = sum+i;
+}while(i<=n);
+document.getElementById ("num2").innerHTML="Sum of "+n+ " natural numbers dowhile  :"+sum;
+
+}
+
+
+</script>
+</html>

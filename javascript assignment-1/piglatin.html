@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>English to pig latin</title>
+</head>
+<body>
+
+</body>
+<script>	
+function isVowel(c)
+{
+	return (c == 'A' || c == 'E' ||
+			c == 'I' || c == 'O' ||
+			c == 'U' || c == 'a' ||
+			c == 'e' || c == 'i' ||
+			c == 'o' || c == 'u');
+}
+
+function pigLatin(s)
+{
+	let len = s.length;
+	let index = -1;
+	for (let i = 0; i < len; i++)
+	{
+		if (isVowel(s[i]))
+		{
+			index = i;
+			break;
+		}
+	}
+	if (index == -1)
+		return "-1";
+
+	
+	return s.substring(index) +
+		s.substring(0, index)
+						+ "ay";
+}
+str2="prasanna";
+document.write("English word is:"+str2+"<br>");
+document.write("pig latin conversion is:");
+str = pigLatin(str2);
+
+if (str == "-1")
+	document.write("No vowels"
+			+ "found. Pig Latin"
+			+ " not possible");
+else
+	document.write(str);
+
+</script>
+
+</html>
