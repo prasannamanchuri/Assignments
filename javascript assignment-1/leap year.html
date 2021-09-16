@@ -10,17 +10,19 @@ function isLeapYear( year )
 {
 	return ( (new Date( year, 1, 29 )).getDate() === 29); 
 }
-function leapYearCalc(yr) {
+function leapYearCalc(yr) 
+{
   var counter = 20;
-  while (counter > 0) {
-    if (isLeapYear(yr)) {
+  while (counter > 0) 
+  {
+    if (isLeapYear(yr)) 
+    {
       counter--;
       console.log(yr); document.writeln(yr+'<br>');
     }
     yr++;
   } 
 }
-
 var year = prompt("please input a year to find out the next 20 years");
 leapYearCalc(year);
 </script>

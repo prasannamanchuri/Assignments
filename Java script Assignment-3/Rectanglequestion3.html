@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Rectangle class</title>
+</head>
+<body>
+</body>
+<script>
+class Rectangle 
+{
+	  constructor(height, width) 
+	  {
+	    this.height = height;
+	    this.width = width;
+	  }
+	  area() 
+	  {
+		    return this.height * this.width;
+		  }
+		}
+    const obj = new Rectangle(5,4);
+	obj.height=50;  
+	obj.area(); 
+	document.write("height is:"+obj.height+"<br>"+"width is:"+obj.width+"<br>"+"Area of rectangle is:"+obj.area());
+</script>
+</html>

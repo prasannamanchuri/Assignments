@@ -1,0 +1,22 @@
+<html>
+<body>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<p id="demo1"></p>
+
+
+<script>
+function myFunction() {
+  var first="prasanna";
+  var last="manchuri";
+  var a = eval("first")+" ";
+  var b = eval("last");
+  var res=a+b;
+  const Name= {first,last};
+  document.getElementById("demo").innerHTML = res;
+  document.getElementById("demo1").innerHTML ="First name is: " + Name.first+"<br>"+"Last name is:"+Name.last;
+}
+</script>
+
+</body>
+</html>

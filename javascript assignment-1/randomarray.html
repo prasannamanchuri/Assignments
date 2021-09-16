@@ -7,7 +7,7 @@
 <body>
 <table>
 <tr>
-<td> <input type="text" name="a" id="first" placeholder="Enter a number"/> </td>
+<td> <input type="text" name="a" id="number" placeholder="Enter size of array"/> </td>
 </tr>
 <tr>
 <td> <button onclick="random()">Submit</button></td>
@@ -21,7 +21,7 @@ function random()
 var n,i,sum = 0,min,max,avg=0;
 var even_count=0,odd_count=0,count="";
 var arr=[];
-n = parseInt(document.getElementById ("first").value);
+n = parseInt(document.getElementById ("number").value);
 for (i =1; i<=n; i++)
 {
 	arr.push(Math.round(Math.random() *n))

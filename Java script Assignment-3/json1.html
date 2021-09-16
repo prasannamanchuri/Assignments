@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Creating an Object from a JSON String</h2>
+
+<p id="demo"></p>
+
+<script>
+const person1 ='{"fname":"John","lname":"roy","age":30,"skills":["java", "js", "html"],"Address":{"city":"Banglore","pincode":51456},"dOfBirthate":"1998-01-01","married":true,"profession":"Teacher"}'
+const person2 ='{"fname":"prasanna","lname":"manchuri","age":22,"skills":["java","html"],"Address":{"city":"mpl","pincode":517325},"dOfBirthate":"1999-03-05","married":false,"profession":"Trainee"}'
+const p= JSON.parse(person1);
+const p1= JSON.parse(person2);
+document.getElementById("demo").innerHTML ="Detals of person1:"+"<br><br>"+p.fname +"<br>"+p.lname +"<br>"+p.age +"<br>"+p.skills+"<br>"+p.Address+"<br>"+p.dOfBirthate +"<br>"+p.married +"<br>"+p.profession+"<br><br>"+"Details of Person2:"+"<br><br>"+p1.fname +"<br>"+p1.lname +"<br>"+p1.age +"<br>"+p1.skills+"<br>"+p1.Address+"<br>"+p1.dOfBirthate +"<br>"+p1.married +"<br>"+p1.profession ;
+</script>
+
+</body>
+</html>

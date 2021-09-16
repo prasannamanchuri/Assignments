@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>prototype method</title>
+</head>
+<body>
+</body>
+<script>
+function Rectangle(height, width) 
+	  {
+	    this.height = height;
+	    this.width = width;
+	  }
+	  Rectangle.prototype.Area= function()
+	  {
+		  document.write("<br>"+"area of rectangle is:" +this.height*this.width);
+	  }
+		let Rectangle1= new Rectangle(5,6); 
+		let Rectangle2= new Rectangle(4,7);
+		Rectangle1.Area();
+		Rectangle1.Area();
+</script>
+</html>

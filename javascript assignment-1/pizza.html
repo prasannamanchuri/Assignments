@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<style>
+.main{
+   
+    padding: 80;
+}
+
+.section1{
+    background-color: aliceblue;
+    height:fit-content;
+    width: 50%;
+    
+}
+.section1 #help{
+    position: absolute;
+    top: 20;
+    right:20;
+    font-weight: bolder;
+
+}
+.section2{
+    padding-top: 20px;
+    background-color: aliceblue;
+    width: 50%;
+}
+
+.section3{
+    padding-top: 20px;
+    background-color: aliceblue;
+    width: 50%;
+}
+</style>
+<link rel="stylesheet" href="A1q20.css">
+<script type="text/javascript" src="A1q20.js"></script>
+<body>
+    
+
+
+<div class="main">
+<form action="" onsubmit="return false">
+    <div class="section1" onmouseover="help()" onmouseleave="clear()">
+
+        <label for="name" ">Name:</label>
+        <input type="text" id="name" required>
+        <br> <br>
+        <label for="email">Email:</label>
+        <input type="text" id="name" name="name" required>
+            <textarea name="help" id="help" cols="30" rows="10">
+                shows help on current active area
+
+            </textarea>
+     
+        
+    </div>
+
+    <div class="section2" onmouseover="help1()"> 
+
+        <label for="options">Toppings:</label><br>
+        <label for="Cheese">Extra Cheese:</label>
+        <input type="checkbox" name="Cheese" value="cheese">
+        <label for="Pepperoni">Pepperoni:</label>
+        <input type="checkbox" name="Pepperoni" value="pep">
+        <label for="olive">         olives:</label>
+        <input type="checkbox" name="olive" value="olive">
+        <label for="pepper">pepper:</label>
+        <input type="checkbox" name="pepper" value="pepper">
+        <label for="bacon">bacon:</label>
+        <input type="checkbox" name="bacon" value="bacon">
+        <label for="mushroom">mushrooms:</label>
+        <input type="checkbox" name="mushroom" value="mush">
+
+        <p>How do you want to get your pizza?</p>
+        <label for="pichup">Delivery</label>
+        <input type="radio" name="pickup" id="delivery" value="d">
+        <label for="pichup">Pickup</label>
+        <input type="radio" name="pickup" id="delivery" value="p">
+        
+    </div>
+    <div class="section3" onmouseover="help3()">
+        <label for="Address">Address:</label> <br>
+        <textarea name="Address" id="Address" cols="30" rows="10">
+
+        </textarea><br>
+<br>
+        <input type="submit" onclick="valid()">
+        <input type="reset" value="Clear all">
+        <input type="button" value="Summary" name="summary" id="summary" disabled=true>
+    </div>
+
+
+
+</form>
+</div>
+
+</body>
+<script>
+function help()
+{
+    document.getElementById("help").value = "Name: Enter your name\nEmail: Enter your email.";
+}
+function clear(){
+    document.getElementById("help").value = " ";
+}
+
+function help1()
+{
+    document.getElementById("help").value = "Choose your required toppings.";
+}
+function help3()
+{
+    document.getElementById("help").value = "Enter your address where we can deliver the order.";
+}
+
+function valid()
+{
+    document.getElementById("summary").disabled=false;
+}
+</script>
+</html>
