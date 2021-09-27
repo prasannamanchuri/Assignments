@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HelloWorldController
 {
- @RequestMapping
+ @RequestMapping(value="add")
  public String add()
  {
 	 return "helloworld.jsp";
