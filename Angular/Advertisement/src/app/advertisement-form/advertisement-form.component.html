@@ -1,0 +1,49 @@
+<div class="card">
+    <div class="card-header">
+        <h5>Add Advertisement</h5>
+    </div>
+    <div class="card-body">
+        <form #contactForm="ngForm" (ngSubmit)="submit(contactForm.value)">
+   
+            <div class="form-group">
+                <label for="Title">Title</label>
+                <input required minlength="3" maxlength="10" ngModel name="Title" type="text" #Title="ngModel" class="form-control" id="Title">
+                <div class="alert alert-danger" *ngIf="Title.touched && !Title.valid">
+                    <div *ngIf="Title.errors?.required">Title is required.</div>
+                    <div *ngIf="Title.errors?.minlength">Title is minimum {{Title.errors?.minlength.requiredLength }} character.</div>
+                    <div *ngIf="Title.errors?.maxlength">Title is maximum 10 character.</div>
+                </div>
+            </div>
+             
+            <div class="form-group">
+                <label for="Name">Name</label>
+                <input required ngModel name="Name" type="text" #Name="ngModel" class="form-control" id="Name">
+                <div class="alert alert-danger" *ngIf="Name.touched && !Name.valid">
+                   Name is required.
+                </div>
+            </div>
+             
+            <div class="form-group">
+                <label for="Category">Category</label>
+                <select name="Category" ngModel name="Category" #Category="ngModel" class="form-control" id="Description">
+                  <option selected="selected" value="one">furniture</option>
+                  <option value="two">mobile</option>
+                  <option value="three">hardware</option>
+                  </select>
+                <div class="alert alert-danger" *ngIf="Category.touched">
+                    Category is required.
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="Description">Description</label>
+              <input required ngModel name="Description" type="text" #Description="ngModel" class="form-control" id="Description">
+              <div class="alert alert-danger" *ngIf="Description.touched && !Description.valid">
+                  Description is required.
+              </div>
+          </div>
+              
+            <button class="btn btn-primary" type="submit" [class.disabled]="!contactForm.valid">Submit</button>
+            
+          </form>          
+    </div>
+</div>
